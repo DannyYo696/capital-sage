@@ -14,7 +14,7 @@ const businesses = [
     description:
       "People-driven financial empowerment and inclusive solutions driven by the power of technology. We're making financial services accessible to everyone across Nigeria and beyond.",
     image: "/african-woman-using-mobile-banking-app-fintech.jpg",
-    link: "/businesses/fintech",
+    link: "",
     stats: [
       { value: "500K+", label: "Active Users" },
       { value: "₦50B+", label: "Transactions Processed" },
@@ -29,7 +29,7 @@ const businesses = [
     description:
       "Shaping sustainable growth across the agricultural and FMCG landscape for food security and economic development. From farm to global markets.",
     image: "/african-cocoa-farmers-harvest-sustainable-agricult.jpg",
-    link: "/businesses/agribusiness",
+    link: "",
     stats: [
       { value: "150K+", label: "Farmers Empowered" },
       { value: "$40M+", label: "Export Value" },
@@ -44,7 +44,7 @@ const businesses = [
     description:
       "Our state-of-the-art medical facilities and diagnostic centres provide everyone with excellent medical care. Quality healthcare should be accessible to all.",
     image: "/modern-african-healthcare-facility-medical-profess.jpg",
-    link: "/businesses/healthcare",
+    link: "",
     stats: [
       { value: "50+", label: "Medical Centers" },
       { value: "200K+", label: "Patients Served" },
