@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { ArrowRight, Smartphone, Sprout, Menu, Heart, X } from "lucide-react"
 import Link from "next/link"
+import { url } from "inspector"
 
 const businesses = [
   {
@@ -13,15 +14,15 @@ const businesses = [
     tagline: "Rethinking Finance Through Technology",
     description:
       "People-driven financial empowerment and inclusive solutions driven by the power of technology. We're making financial services accessible to everyone across Nigeria and beyond.",
+      
     image: "/african-woman-using-mobile-banking-app-fintech.jpg",
-    link: "/businesses/fintech",
+    link: "",
     stats: [
-      { value: "500K+", label: "Active Users" },
-      { value: "₦50B+", label: "Transactions Processed" },
-      { value: "15+", label: "Financial Products" },
+      
     ],
     color: "from-blue-600 to-indigo-700",
   },
+  
   {
     title: "Agribusiness & FMCG",
     icon: Sprout,
@@ -29,11 +30,9 @@ const businesses = [
     description:
       "Shaping sustainable growth across the agricultural and FMCG landscape for food security and economic development. From farm to global markets.",
     image: "/african-cocoa-farmers-harvest-sustainable-agricult.jpg",
-    link: "/businesses/agribusiness",
+    link: "",
     stats: [
-      { value: "150K+", label: "Farmers Empowered" },
-      { value: "$40M+", label: "Export Value" },
-      { value: "5", label: "Countries" },
+      
     ],
     color: "from-emerald-600 to-green-700",
   },
@@ -44,15 +43,35 @@ const businesses = [
     description:
       "Our state-of-the-art medical facilities and diagnostic centres provide everyone with excellent medical care. Quality healthcare should be accessible to all.",
     image: "/modern-african-healthcare-facility-medical-profess.jpg",
-    link: "/businesses/healthcare",
+    link: "",
     stats: [
-      { value: "50+", label: "Medical Centers" },
-      { value: "200K+", label: "Patients Served" },
-      { value: "300+", label: "Healthcare Professionals" },
+      
     ],
     color: "from-red-600 to-rose-700",
   },
 ]
+
+const fintechBrands = [
+  { name: "ErcasPay", logo: "https://raw.githubusercontent.com/DannyYo696/svillage/020ff1ae5b3bb0c2920c0e5492f837030df8b927/ercas.webp", url: "https://ercas.ng", },
+  { name: "Kolomoni", logo: "https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/kolomonilogo.webp", url:"https://kolomonimfb.com/" },
+  { name: "Tiki", logo: "https://raw.githubusercontent.com/DannyYo696/svillage/2d84cc5e2ff7790841b9b185e060219de74e2c2b/tblue.png", url:"https://tikibykolomoni.com/" },
+  
+]
+const agribusinessBrands = [
+  { name: "Johnvents Foods", logo: "https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-foods.webp", url: "https://www.johnvents.com/our-businesses/johnvents-foods", },
+  { name: "Johnvents Farms", logo: "https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-farms.webp", url: "https://www.johnvents.com/our-businesses/johnvents-farms", },
+  { name: "Johnvents Trading", logo: "https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-trading.webp", url: "https://www.johnvents.com/our-businesses/johnvents-trading", },
+  { name: "Oluji", logo: "https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/oluji-logos.webp" , url: "https://ercaspay.com", },
+]
+
+const healthcareBrands = [
+  {
+    name: "Best Western Hospital",
+    logo: "https://raw.githubusercontent.com/DannyYo696/svillage/5106b8decc4f888f7eec06c8640b389ebfc62b4c/bestwestern-logo.png",
+    url: "https://www.instagram.com/bestwesternhospital/?hl=en",
+  },
+]
+
 
 
 
@@ -277,16 +296,60 @@ export default function BusinessesPage() {
                 </div>
                 <h2 className="text-5xl font-bold text-foreground mb-6 text-balance">{business.tagline}</h2>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">{business.description}</p>
+                {/* Fintech Brand Logos */}
+{/* Business Portfolio Logos */}
+{(business.title === "Fintech" ||
+  business.title === "Agribusiness & FMCG" ||
+  business.title === "Healthcare") && (
 
-                <div className="grid grid-cols-3 gap-6 mb-8">
-                  {business.stats.map((stat, statIndex) => (
-                    <div key={statIndex}>
-                      <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-                      <div className="text-sm text-muted-foreground">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
+  <div className="mt-10">
+    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+      Portfolio Companies
+    </p>
 
+    <div className="flex flex-wrap items-center gap-6">
+      {(
+  business.title === "Fintech"
+    ? fintechBrands
+    : business.title === "Agribusiness & FMCG"
+    ? agribusinessBrands
+    : healthcareBrands
+).map((brand, i) => (
+
+        <a
+  key={i}
+  href={brand.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`Visit ${brand.name}`}
+  className="
+    flex items-center justify-center px-4 py-2
+    border border-border rounded-lg bg-background
+    hover:shadow-lg hover:-translate-y-1
+    transition-all duration-300
+    focus:outline-none focus:ring-2 focus:ring-primary/40
+  "
+>
+  <img
+    src={brand.logo}
+    alt={brand.name}
+    className="
+      h-6 md:h-7 w-auto
+      grayscale opacity-70
+      hover:opacity-100 hover:grayscale-0
+      transition-all duration-300
+    "
+  />
+</a>
+
+      ))}
+    </div>
+  </div>
+)}
+
+
+
+                
                 <Button size="lg" className="group" asChild>
                   <Link href={business.link}>
                     Learn More

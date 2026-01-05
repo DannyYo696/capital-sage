@@ -49,7 +49,7 @@ const subsidiaries = [
     color: "from-emerald-600 to-green-700",
   },
   {
-    name: "CapitalSage Fintech",
+    name: "Finacial Services & Technology",
     sector: "Financial Technology",
     description: "Innovative financial solutions driving digital inclusion across Nigeria",
     image: "/african-woman-using-mobile-banking-app-fintech.jpg",
@@ -57,7 +57,7 @@ const subsidiaries = [
     color: "from-blue-600 to-indigo-700",
   },
   {
-    name: "CapitalSage Healthcare",
+    name: "Best Western Hospital",
     sector: "Medical Services",
     description: "State-of-the-art diagnostic and medical facilities across major cities",
     image: "/modern-african-healthcare-facility-medical-profess.jpg",
@@ -401,7 +401,7 @@ export default function HomePage() {
       <section className="py-12 sm:py-16 md:py-20 bg-background overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-3xl font-light text-center text-primary mb-8 sm:mb-12 md:mb-16">
-            Our Offerings
+            Our Brands & Products
           </h2>
 
           <div className="relative">

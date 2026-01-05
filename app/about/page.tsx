@@ -151,24 +151,21 @@ const milestones = [
 
 const subsidiaries = [
   {
-    name: "CapitalSage Technology",
-    sector: "Financial Technology",
+    name: "Financial Services & Technology",
     description: "Democratizing access to financial services across Africa through innovative digital solutions",
     image: "/modern-fintech-mobile-banking-africa-digital-finan.jpg",
     color: "from-blue-600/90 to-blue-800/90",
     stats: { value: "500K+", label: "Active Users" },
   },
   {
-    name: "Johnvents Industries",
-    sector: "Agribusiness & FMCG",
+    name: "Agribusiness & FMCG",
     description: "Leading cocoa processing and food manufacturing, empowering farmers and delivering quality products",
     image: "/african-cocoa-farmers-harvest-sustainable-agricult.jpg",
     color: "from-amber-600/90 to-orange-700/90",
     stats: { value: "$40M", label: "Export Value" },
   },
   {
-    name: "CapitalSage Healthcare",
-    sector: "Healthcare",
+    name: "Healthcare",
     description: "Providing world-class diagnostic and healthcare services to communities across Nigeria",
     image: "/modern-healthcare-facility-africa-medical-professi.jpg",
     color: "from-emerald-600/90 to-teal-700/90",
@@ -446,49 +443,68 @@ useEffect(() => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-12 sm:py-16 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
-            <div className="group relative p-6 sm:p-8 md:p-10 bg-[#06319E] rounded-2xl sm:rounded-3xl text-white overflow-hidden hover:scale-105 transition-transform duration-500">
-              <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-white/10 rounded-full blur-3xl transform translate-x-24 sm:translate-x-32 -translate-y-24 sm:-translate-y-32" />
-              <div className="relative z-10">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 sm:mb-6">
-                  <Target className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8" />
-                </div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-6">Our Mission</h3>
-                <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
-                  To build world-class businesses that create economic opportunity, drive sustainable development, and
-                  contribute to a prosperous Africa where everyone can thrive.
-                </p>
-              </div>
-            </div>
+      {/* Mission & Vision – Premium Redesign */}
+{/* Mission & Vision – Cinematic Version */}
+<section className="relative py-24 overflow-hidden cinematic-section">
+  {/* Ambient background */}
+  <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/40 to-background" />
+  <div className="absolute inset-0 glow-left" />
+  <div className="absolute inset-0 glow-right" />
 
-            <div className="group relative p-6 sm:p-8 md:p-10 bg-[#FF6400] rounded-2xl sm:rounded-3xl text-white overflow-hidden hover:scale-105 transition-transform duration-500">
-              <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-white/10 rounded-full blur-3xl transform translate-x-24 sm:translate-x-32 -translate-y-24 sm:-translate-y-32" />
-              <div className="relative z-10">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 sm:mb-6">
-                  <Eye className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8" />
-                </div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-6">Our Vision</h3>
-                <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
-                  To be Africa's most respected conglomerate, recognized for building businesses that transform lives,
-                  communities, and contribute to the continent's position in the global economy.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="relative container mx-auto px-4 sm:px-6">
+    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+
+      {/* Mission */}
+      <div className="cinematic-block">
+        <span className="eyebrow text-primary">Our Mission</span>
+
+        <h3 className="cinematic-heading">
+          Building businesses that create
+          <span className="highlight-primary">lasting prosperity</span>
+        </h3>
+
+        <p className="cinematic-text">
+          To build world-class businesses that create economic opportunity, drive
+          sustainable development, and contribute to a prosperous Africa where
+          everyone can thrive.
+        </p>
+
+        <div className="accent-line primary-line" />
+      </div>
+
+      {/* Vision */}
+      <div className="cinematic-block">
+        <span className="eyebrow text-[#FF6400]">Our Vision</span>
+
+        <h3 className="cinematic-heading">
+          Africa’s most respected
+          <span className="highlight-secondary">value-creating conglomerate</span>
+        </h3>
+
+        <p className="cinematic-text">
+          To be Africa's most respected conglomerate, recognized for building
+          businesses that transform lives, strengthen communities, and elevate
+          the continent’s role in the global economy.
+        </p>
+
+        <div className="accent-line secondary-line" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
       <section className="py-12 sm:py-16 md:py-24 bg-background overflow-hidden">
               <div className="container mx-auto px-4 sm:px-6">
                 <div className="text-center mb-8 sm:mb-12 md:mb-16">
-                  <p className="text-xs sm:text-sm font-semibold text-primary mb-2 sm:mb-4">OUR PORTFOLIO</p>
+                  <p className="text-xs sm:text-sm font-semibold text-primary mb-2 sm:mb-4">OUR SECTORS</p>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2 sm:mb-4">
                     Companies Driving Africa Forward
                   </h2>
                   <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-                    Each subsidiary is a powerhouse in its sector, united by our mission to build prosperity across the
+                    Each sector is united by our mission to build prosperity across the
                     continent
                   </p>
                 </div>
@@ -515,9 +531,7 @@ useEffect(() => {
                               index === currentSubsidiary ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                             }`}
                           >
-                            <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/20 backdrop-blur-sm rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4 md:mb-6">
-                              {subsidiary.sector}
-                            </div>
+                            
                             <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6">
                               {subsidiary.name}
                             </h3>
@@ -563,7 +577,7 @@ useEffect(() => {
               </div>
             </section>
 
-      {/* Logo Slideshow */}
+      {/* Our Brands */}
       <section className="py-12 sm:py-16 md:py-20 bg-background overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-3xl font-light text-center text-primary mb-8 sm:mb-12 md:mb-16">
@@ -586,36 +600,21 @@ useEffect(() => {
                     alt="Best Western Hospital"
                   />
                 </div>
-                <div className="logo-card">
-                  <img
-                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/premium-cocoa.webp"
-                    alt="Cocoa Products"
-                  />
-                </div>
+                
                 <div className="logo-card">
                   <img
                     src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-foods.webp"
                     alt="Johnvents Foods"
                   />
                 </div>
-                <div className="logo-card">
-                  <img
-                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/pure-cocoa.webp"
-                    alt="Pure Cocoa Powder"
-                  />
-                </div>
+                
                 <div className="logo-card">
                   <img
                     src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-farms.webp"
                     alt="JV Farms"
                   />
                 </div>
-                <div className="logo-card">
-                  <img
-                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/oluji-logos.webp"
-                    alt="Oluji"
-                  />
-                </div>
+                
                 <div className="logo-card">
                   <img
                     src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-trading.webp"
@@ -648,36 +647,21 @@ useEffect(() => {
                     alt="Best Western Hospital"
                   />
                 </div>
-                <div className="logo-card">
-                  <img
-                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/premium-cocoa.webp"
-                    alt="Premium Cocoa Products"
-                  />
-                </div>
+                
                 <div className="logo-card">
                   <img
                     src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-foods.webp"
                     alt="Johnvents Foods"
                   />
                 </div>
-                <div className="logo-card">
-                  <img
-                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/pure-cocoa.webp"
-                    alt="Pure Cocoa Powder"
-                  />
-                </div>
+                
                 <div className="logo-card">
                   <img
                     src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-farms.webp"
                     alt="JV Farms"
                   />
                 </div>
-                <div className="logo-card">
-                  <img
-                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/oluji-logos.webp"
-                    alt="Oluji"
-                  />
-                </div>
+                
                 <div className="logo-card">
                   <img
                     src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/jv-trading.webp"
@@ -701,6 +685,73 @@ useEffect(() => {
           </div>
         </div>
       </section>
+
+      
+      {/* Our Products */}
+      <section className="py-12 sm:py-16 md:py-20 bg-background overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl font-light text-center text-primary mb-8 sm:mb-12 md:mb-16">
+            Our Products
+          </h2>
+
+          <div className="relative">
+            <div className="logo-slideshow-container">
+              <div className="logo-slideshow">
+                {/* First set of logos */}
+                
+                <div className="logo-card">
+                  <img
+                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/premium-cocoa.webp"
+                    alt="Cocoa Products"
+                  />
+                </div>
+                
+                <div className="logo-card">
+                  <img
+                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/pure-cocoa.webp"
+                    alt="Pure Cocoa Powder"
+                  />
+                </div>
+                
+                <div className="logo-card">
+                  <img
+                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/oluji-logos.webp"
+                    alt="Oluji"
+                  />
+                </div>
+                
+                
+                
+
+                {/* Duplicate set for seamless loop */}
+                
+                <div className="logo-card">
+                  <img
+                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/premium-cocoa.webp"
+                    alt="Premium Cocoa Products"
+                  />
+                </div>
+                
+                <div className="logo-card">
+                  <img
+                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/pure-cocoa.webp"
+                    alt="Pure Cocoa Powder"
+                  />
+                </div>
+                
+                <div className="logo-card">
+                  <img
+                    src="https://raw.githubusercontent.com/DannyYo696/svillage/2b2f21efc5ff64eb4f6b99eed5a648a83b969d0d/oluji-logos.webp"
+                    alt="Oluji"
+                  />
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Core Values */}
       <section className="py-12 sm:py-16 md:py-24">
@@ -751,15 +802,21 @@ useEffect(() => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 transform -translate-x-1/2 hidden md:block" />
+            {/* Timeline line */}
+            <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-primary/30 md:left-1/2 md:w-1 transform md:-translate-x-1/2" />
+
 
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
                 <div
                   key={index}
-                  className={`flex items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                  className={`relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 ${
+  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+}`}
+
                 >
-                  <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
+                  <div className={`w-full md:flex-1 md:${index % 2 === 0 ? "text-right" : "text-left"}`}>
+
                     <div className="group inline-block">
                       <div className="p-8 bg-card border border-border rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105">
                         <div className="text-4xl font-bold text-primary mb-3">{milestone.year}</div>
@@ -769,9 +826,11 @@ useEffect(() => {
                     </div>
                   </div>
 
-                  <div className="relative z-10 w-6 h-6 rounded-full bg-primary hidden md:block" />
+                  <div className="absolute left-3 top-10 z-10 w-3 h-3 rounded-full bg-primary md:static md:w-6 md:h-6" />
 
-                  <div className="flex-1" />
+
+                  <div className="hidden md:flex-1" />
+
                 </div>
               ))}
             </div>

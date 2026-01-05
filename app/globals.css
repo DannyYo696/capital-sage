@@ -161,3 +161,158 @@
     animation-play-state: paused;
   }
 }
+/* =========================
+   CINEMATIC ANIMATIONS
+   ========================= */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .cinematic-section {
+    animation: sectionFade 1.2s ease-out both;
+  }
+
+  .cinematic-block {
+    animation: contentRise 1s ease-out both;
+    animation-delay: 0.2s;
+  }
+
+  .cinematic-heading {
+    animation: textReveal 1.1s ease-out both;
+    animation-delay: 0.35s;
+  }
+
+  .accent-line {
+    animation: lineGrow 0.9s ease-out both;
+    animation-delay: 0.6s;
+  }
+
+  .glow-left,
+  .glow-right {
+    animation: slowDrift 18s ease-in-out infinite alternate;
+  }
+}
+
+/* =========================
+   KEYFRAMES
+   ========================= */
+
+@keyframes sectionFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 6rem;
+    opacity: 1;
+  }
+}
+
+@keyframes slowDrift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
+
+/* =========================
+   BACKGROUND GLOWS
+   ========================= */
+
+.glow-left {
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(6, 49, 158, 0.08),
+    transparent 60%
+  );
+}
+
+.glow-right {
+  background: radial-gradient(
+    circle at 70% 80%,
+    rgba(255, 100, 0, 0.08),
+    transparent 60%
+  );
+}
+
+/* =========================
+   TYPOGRAPHY HELPERS
+   ========================= */
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cinematic-heading {
+  margin-top: 1rem;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.highlight-primary {
+  display: block;
+  color: var(--primary);
+}
+
+.highlight-secondary {
+  display: block;
+  color: #ff6400;
+}
+
+.cinematic-text {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  max-width: 40rem;
+  line-height: 1.7;
+}
+
+.accent-line {
+  margin-top: 2.5rem;
+  height: 2px;
+  border-radius: 999px;
+}
+
+.primary-line {
+  background: rgba(6, 49, 158, 0.6);
+}
+
+.secondary-line {
+  background: rgba(255, 100, 0, 0.7);
+}
